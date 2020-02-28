@@ -1,0 +1,40 @@
+// @ts-check
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import faker from 'faker'
+import CommentDetail from './CommentDetail'
+import ApprovalCard from './ApprovalCard'
+
+const App = () => {
+    return (
+        <div className="ui container comments">
+            <ApprovalCard>
+                <CommentDetail
+                    author="Q"
+                    time="Today at 10AM"
+                    text="I am so handsome"
+                    image={faker.image.avatar()}
+                />
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail
+                    author="Zatoon"
+                    time="Today at 11AM"
+                    text="Yes you are betay"
+                    image={faker.image.avatar()}
+                />
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail
+                    author="Eva"
+                    time="Today at 3PM"
+                    text="You're the best bu ever"
+                    image={faker.image.avatar()}
+                />
+            </ApprovalCard>
+        </div>
+    )
+}
+
+ReactDOM.render(<App></App>, document.querySelector('#root'))
